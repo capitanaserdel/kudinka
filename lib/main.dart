@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kudinkaa/providers/auth.dart';
@@ -12,6 +13,7 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   FlutterNativeSplash.remove();
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool('ShowHome') ?? false;
@@ -41,18 +43,23 @@ class App extends StatelessWidget {
     return MultiProvider(
       providers: [
       ChangeNotifierProvider(create: (_) => Auth(),)
-    ],child:  MaterialApp(
-      title: 'KudiKan',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(outlinedButtonTheme: OutlinedButtonThemeData(style: ButtonStyle()),
-        fontFamily: 'Roboto',
-        buttonColor: Colors.green.shade500,
-        primarySwatch: Colors.green,
-      ),
-      home: ShowHome ? SettingsScreen() : OnBoardingPage(),
-      routes: {
+    ],child:  Consumer<Auth>(
+      builder: (ctx, auth,_) =>
+      MaterialApp(
+        title: 'KudiKan',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(outlinedButtonTheme: OutlinedButtonThemeData(style: ButtonStyle()),
+          fontFamily: 'Roboto',
+          buttonColor: Colors.green.shade500,
+          primarySwatch: Colors.green,
+        ),
+        home:  auth.isAuth
+            ? SettingsScreen()
+            : AuthScreen(),
+        routes: {
 
-      },
+        },
+      ),
     ),);
      
   }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "489282453322",
+    "firebase_url": "https://kudikan-67e90-default-rtdb.firebaseio.com",
+    "project_id": "kudikan-67e90",
+    "storage_bucket": "kudikan-67e90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489282453322:android:2ed47dca58115bd033cbb3",
+        "android_client_info": {
+          "package_name": "com.example.kudinkaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489282453322-bvjgpj6f0navev2hmjf5ts8g2r5pe9h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTJN1cJ7UIxcgM4TwV4_-wOyL-q6sH5ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489282453322-bvjgpj6f0navev2hmjf5ts8g2r5pe9h4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "489282453322-turuj0el8tsnspo6rfjkoe90bbeak2ep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kudinkaa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

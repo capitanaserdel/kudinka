@@ -45,6 +45,7 @@ dependencies:
   shared_preferences: ^2.1.2
   http:
   provider:
+  firebase_core:
 
 dev_dependencies:
   flutter_test:

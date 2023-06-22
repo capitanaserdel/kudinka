@@ -137,7 +137,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
   void _onIntroEnd(context) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (_) {
-        return SettingsScreen();
+        return AuthScreen();
       }),
     );
   }
@@ -190,7 +190,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
                 prefs.setBool('ShowHome', true);
                 _onIntroEnd(context);
               },
-              child: const Text('Continue')),
+              child: const Text('Get Started')),
         ),
       )
           : Container(
