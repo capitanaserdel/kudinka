@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kudinkaa/screens/onboarding_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../providers/auth.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -22,8 +25,8 @@ class SettingsScreen extends StatelessWidget {
           onPressed: () async {
           final prefs = await SharedPreferences.getInstance();
           prefs.setBool('ShowHome', false);
-          _onIntroEnd(context);
-        }, icon: Icon(Icons.logout_outlined),),
+          } ,
+          icon: Icon(Icons.logout_outlined),),
       ),
     );
   }

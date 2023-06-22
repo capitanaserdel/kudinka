@@ -57,7 +57,7 @@ class App extends StatelessWidget {
             ? SettingsScreen()
             : AuthScreen(),
         routes: {
-
+ AuthScreen.routeName: (cxt) => AuthScreen(),
         },
       ),
     ),);
